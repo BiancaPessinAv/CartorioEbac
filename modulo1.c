@@ -172,14 +172,15 @@ int main() {
         printf("Escolha a opção desejada:\n\n");
         printf("\t1 - Registrar nomes\n");
         printf("\t2 - Consultar nomes\n");
-        printf("\t3 - Deletar nomes\n\n");
+        printf("\t3 - Deletar nomes\n");
+        printf("\t4 - Sair do sistema\n\n");
         printf("Esse software é feito por Bianca Pessin Avelino, uma aplicação de uso livre.\n");
         printf("Software feito através dos ensinamentos do curso da EBAC\n");
         printf("____________________________________________________________________\n");
         printf("Insira uma opção: ");
         scanf("%d", &escolha);
 
-        if (escolha < 1 || escolha > 3) {//Valida a escolha do usuário
+        if (escolha < 1 || escolha > 4) {//Valida a escolha do usuário
             printf("Opção inválida. Tente novamente.\n");
             Sleep(2000);
             continue;
@@ -198,6 +199,12 @@ int main() {
                 limparTela();
                 deletarRegistro(nomes, &totalNomes);
                 break;
+                
+            case 4:
+            	limparTela();
+            	printf("Obrigado por utilizar o sistema!");
+            	return 0;
+            	break;
         }
     }
 
